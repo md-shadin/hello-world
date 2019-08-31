@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        #focus{
+            display: grid;
+            grid-template-columns: 80% 20%;
+            grid-gap: 7px 7px;
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
         .header{
             background-color:darkgray;
             width:100%;
@@ -12,74 +21,117 @@
         }
         .navigatin{
             width: 100%;
+            padding: 0;
+            margin: 0;
         }
-        .navigatin nav ul li{
-            float:left;
-            padding: 8px;
-            margin: 5px;
+        .navigatin nav ul{
+            position: relative;
             display: block;
             text-align: center;
             background-color: beige;
-            list-style: none;
+            width: 100%;
+            padding: 7px;
         }
-        .navigatin nav ul li a{
+        .navigatin nav ul a{
+            margin: 8px;
+            padding: 5px;
+            border-radius: 5%;
             text-decoration: none;
+            color: blueviolet;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 17px;
+            transition: background-color 0.5s;
+        }
+        .navigatin nav ul a:hover{
+            background-color: palegreen;
+        }
+        .main img{
+            width: 30%;
+            height: 30%;
+            left: 50%;
+            position: relative;
+        }
+        .main{
+            padding: 7px;
+            float:left;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+        }
+        .main img, p{
+            margin-bottom: 20px;
+        }
+        .side{
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+        }
+        .side ul{
+            padding-left: 20%;
+        }
+        .fod{
+            margin: 8px 0px 0px 0px;
+            background-color: blanchedalmond;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>This is hader</h1>
-    </div>
-    <div class="navigatin">
-        <nav>
-            <ul>
-                <li id="item_1"><a href="#">Home</a></li>
-                <li id="item_2"><a href="#">Posts</a></li>
-                <li id="item_3"><a href="#">Category</a></li>
-                <li id="item_4"><a href="#">Comunicat</a></li>
-                <li id="item_5"><a href="#">About us</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="main">
-        <img src="media\images\Arduino_Uno_-_R3[1].jpg" alt="|Arduino">
-        <p>Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers and microcontroller kits for building digital devices. Its products are licensed under the GNU Lesser General Public License (LGPL) or the GNU General Public License (GPL),[1] permitting the manufacture of Arduino boards and software distribution by anyone. Arduino boards are available commercially in preassembled form or as do-it-yourself (DIY) kits. 
-        Arduino board designs use a variety of microprocessors and controllers. The boards are equipped with sets of digital and analog input/output (I/O) pins that may be interfaced to various expansion boards or breadboards (shields) and other circuits. The boards feature serial communications interfaces, including Universal Serial Bus (USB) on some models, which are also used for loading programs from personal computers. The microcontrollers can be programmed using C and C++ programming languages. In addition to using traditional compiler toolchains, the Arduino project provides an integrated development environment (IDE) based on the Processing language project. 
-        The Arduino project started in 2005 as a program for students at the Interaction Design Institute Ivrea in Ivrea, Italy,[2] aiming to provide a low-cost and easy way for novices and professionals to create devices that interact with their environment using sensors and actuators. Common examples of such devices intended for beginner hobbyists include simple robots, thermostats and motion detectors. 
-        The name Arduino comes from a bar in Ivrea, Italy, where some of the founders of the project used to meet. The bar was named after Arduin of Ivrea, who was the margrave of the March of Ivrea and King of Italy from 1002 to 1014.
-        </p>
+    <div class="is">
+        <div class="header">
+            <h1>This is hader</h1>
+        </div>
+        <div class="navigatin">
+            <nav>
+                <ul>
+                    <a href="#">Home</a>
+                    <a href="#">Posts</a>
+                    <a href="#">Category</a>
+                    <a href="#">Comunicat</a>
+                    <a href="#">About us</a>
+                </ul>
+            </nav>
+        </div>
+        <div id="focus">
+            <div class="main">
+                <img src="media\images\Arduino_Uno_-_R3[1].jpg" alt="|Arduino">
+                <p>Arduino is an open-source hardware and software company, project and user community that designs and manufactures single-board microcontrollers and microcontroller kits for building digital devices. Its products are licensed under the GNU Lesser General Public License (LGPL) or the GNU General Public License (GPL),[1] permitting the manufacture of Arduino boards and software distribution by anyone. Arduino boards are available commercially in preassembled form or as do-it-yourself (DIY) kits. 
+                Arduino board designs use a variety of microprocessors and controllers. The boards are equipped with sets of digital and analog input/output (I/O) pins that may be interfaced to various expansion boards or breadboards (shields) and other circuits. The boards feature serial communications interfaces, including Universal Serial Bus (USB) on some models, which are also used for loading programs from personal computers. The microcontrollers can be programmed using C and C++ programming languages. In addition to using traditional compiler toolchains, the Arduino project provides an integrated development environment (IDE) based on the Processing language project. 
+                The Arduino project started in 2005 as a program for students at the Interaction Design Institute Ivrea in Ivrea, Italy,[2] aiming to provide a low-cost and easy way for novices and professionals to create devices that interact with their environment using sensors and actuators. Common examples of such devices intended for beginner hobbyists include simple robots, thermostats and motion detectors. 
+                The name Arduino comes from a bar in Ivrea, Italy, where some of the founders of the project used to meet. The bar was named after Arduin of Ivrea, who was the margrave of the March of Ivrea and King of Italy from 1002 to 1014.
+                </p>
 
 
-        <img src="media\images\1024px-NodeMCU_DEVKIT_1.0[1].jpg" alt="NodeMCU">
-        <p>NodeMCU is an open source IoT platform.[4][5] It includes firmware which runs on the ESP8266 Wi-Fi SoC from Espressif Systems, and hardware which is based on the ESP-12 module.[6][7] The term "NodeMCU" by default refers to the firmware rather than the development kits. The firmware uses the Lua scripting language. It is based on the eLua project, and built on the Espressif Non-OS SDK for ESP8266. It uses many open source projects, such as lua-cjson[8] and SPIFFS.</p>
-        <img src="media\images\HandyBoard_GJP[1].jpg" alt="The Handy Board">
-        <p>Jump to search
-            The Handy Board is a popular handheld robotics controller. The Handy Board was developed at MIT by Fred G. Martin, and was closely based on a previous controller designed by Martin and Randy Sargent for the MIT LEGO Robot Contest. The Handy Board design is licensed free of charge. Thus, several manufacturers make Handy Boards. The Handy Board is used by hundreds of schools worldwide and by many hobbyists for their robot projects.
-            </p>
-        <img src="media\images\1024px-Hexapod_robots[1].jpg" alt="CMUcam">
-        <p>
-                A CMUcam is a low cost computer vision device intended for robotics research. CMUcams consist of a small video camera and a microcontroller with a serial interface. While other digital cameras typically use a much higher bandwidth connector, the CMUcam's lightweight interface allows it to be accessed by microcontrollers. More importantly, the on-board microprocessor supports simple image processing and color blob tracking, making rudimentary computer vision capable in systems that would previously have far too little power to do such a thing. It has been used in past years by the high-school FIRST Robotics Competition as a way of letting participants' robots track field elements and navigate autonomously. The CMUcam also has an extremely small form factor. For these reasons, it is relatively popular for making small, mobile robots. 
-                The original design was originally made by Carnegie Mellon University, who has licensed it to various manufacturers.
-        </p>
-        <img src="media\images\SytechMainboardAndGHIButton[1].png" alt=".NET Gadgeteer">
-        <p>
-            .NET Gadgeteer projects consist of a mainboard and a series of modules connected via a standard 10 pin connector. The mainboard sockets can support one or more different types of modules, shown by a series of letters next to the socket. Each module has a letter showing its module type. (Connecting modules incorrectly does not harm the hardware – providing only one red power module is used). Any module that supplies power (via USB, DC or battery) is coloured red to help prevent multiple power sources that can potentially harm the devices. 
-            The Gadgeteer library includes a layer of event-driven drivers and code generation, which integrates with Visual Studio. This enables developers to visually create a diagram in Visual Studio of which hardware modules (for instance, a camera module, button module and screen module) are connected to which sockets on the mainboard, and the Gadgeteer SDK then auto-generates code creating object instances for all the relevant hardware. In this way the developer can immediately begin writing .NET code targeting the connected hardware.
-        </p>
+                <img src="media\images\1024px-NodeMCU_DEVKIT_1.0[1].jpg" alt="NodeMCU">
+                <p>NodeMCU is an open source IoT platform.[4][5] It includes firmware which runs on the ESP8266 Wi-Fi SoC from Espressif Systems, and hardware which is based on the ESP-12 module.[6][7] The term "NodeMCU" by default refers to the firmware rather than the development kits. The firmware uses the Lua scripting language. It is based on the eLua project, and built on the Espressif Non-OS SDK for ESP8266. It uses many open source projects, such as lua-cjson[8] and SPIFFS.</p>
+                <img src="media\images\HandyBoard_GJP[1].jpg" alt="The Handy Board">
+                <p>Jump to search
+                    The Handy Board is a popular handheld robotics controller. The Handy Board was developed at MIT by Fred G. Martin, and was closely based on a previous controller designed by Martin and Randy Sargent for the MIT LEGO Robot Contest. The Handy Board design is licensed free of charge. Thus, several manufacturers make Handy Boards. The Handy Board is used by hundreds of schools worldwide and by many hobbyists for their robot projects.
+                    </p>
+                <img src="media\images\1024px-Hexapod_robots[1].jpg" alt="CMUcam">
+                <p>
+                        A CMUcam is a low cost computer vision device intended for robotics research. CMUcams consist of a small video camera and a microcontroller with a serial interface. While other digital cameras typically use a much higher bandwidth connector, the CMUcam's lightweight interface allows it to be accessed by microcontrollers. More importantly, the on-board microprocessor supports simple image processing and color blob tracking, making rudimentary computer vision capable in systems that would previously have far too little power to do such a thing. It has been used in past years by the high-school FIRST Robotics Competition as a way of letting participants' robots track field elements and navigate autonomously. The CMUcam also has an extremely small form factor. For these reasons, it is relatively popular for making small, mobile robots. 
+                        The original design was originally made by Carnegie Mellon University, who has licensed it to various manufacturers.
+                </p>
+                <img src="media\images\SytechMainboardAndGHIButton[1].png" alt=".NET Gadgeteer">
+                <p>
+                    .NET Gadgeteer projects consist of a mainboard and a series of modules connected via a standard 10 pin connector. The mainboard sockets can support one or more different types of modules, shown by a series of letters next to the socket. Each module has a letter showing its module type. (Connecting modules incorrectly does not harm the hardware – providing only one red power module is used). Any module that supplies power (via USB, DC or battery) is coloured red to help prevent multiple power sources that can potentially harm the devices. 
+                    The Gadgeteer library includes a layer of event-driven drivers and code generation, which integrates with Visual Studio. This enables developers to visually create a diagram in Visual Studio of which hardware modules (for instance, a camera module, button module and screen module) are connected to which sockets on the mainboard, and the Gadgeteer SDK then auto-generates code creating object instances for all the relevant hardware. In this way the developer can immediately begin writing .NET code targeting the connected hardware.
+                </p>
+            </div>
+            <div class="side">
+                <h3 id="sideder" style="text-align: center;">Relative List</h3>
+                <ul>
+                    <li><a href="https://www.bing.com/search?q=west+coast+products+robotics&FORM=R5FD">west coast products robotics</a></li>
+                    <li><a href="https://www.bing.com/search?q=west+coast+products+robotics&FORM=R5FD">west coast products robotics</a></li>
+                    <li><a href="https://www.bing.com/search?q=west+coast+products+frc&FORM=R5FD2">top 10 robotics companies</a></li>
+                    <li><a href="https://www.bing.com/search?q=comau+robotics+products&FORM=R5FD4">top 10 robotics companies</a></li>
+                    <li><a href="https://www.bing.com/search?q=vex+kits+for+sale&FORM=R5FD5">top 10 robotics companies</a></li>
+                    <li><a href="https://www.bing.com/search?q=vex+kits+for+sale&FORM=R5FD5">top 10 robotics companies</a></li>
+                    <li><a href="https://www.bing.com/search?q=vex+kits+for+sale&FORM=R5FD5">top 10 robotics companies</a></li>
+                    <li><a href="https://www.bing.com/search?q=vex+kits+for+sale&FORM=R5FD5">top 10 robotics companies</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="side">
-        <h3 id="sideder">Relative List</h3>
-        <ul>
-            <li><a href="https://www.bing.com/search?q=west+coast+products+robotics&FORM=R5FD">west coast products robotics</a></li>
-            <li><a href="https://www.bing.com/search?q=west+coast+products+robotics&FORM=R5FD">west coast products robotics</a></li>
-            <li><a href="https://www.bing.com/search?q=west+coast+products+frc&FORM=R5FD2">top 10 robotics companies</a></li>
-            <li><a href="https://www.bing.com/search?q=comau+robotics+products&FORM=R5FD4">top 10 robotics companies</a></li>
-            <li><a href="https://www.bing.com/search?q=vex+kits+for+sale&FORM=R5FD5">top 10 robotics companies</a></li>
-            <li><a href="https://www.bing.com/search?q=vex+kits+for+sale&FORM=R5FD5">top 10 robotics companies</a></li>
-            <li><a href="https://www.bing.com/search?q=vex+kits+for+sale&FORM=R5FD5">top 10 robotics companies</a></li>
-            <li><a href="https://www.bing.com/search?q=vex+kits+for+sale&FORM=R5FD5">top 10 robotics companies</a></li>
-        </ul>
+
+    <div class="fod">
+        <p style="text-align:center;"> 2020&COPY; Audhore: Md Shadhin</p>
     </div>
 </body>
 </html>
